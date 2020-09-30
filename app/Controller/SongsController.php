@@ -341,7 +341,7 @@ class SongsController extends AppController {
                 'fields' => array('Song.band', 'Song.album', 'cover'),
                 'group' => array('Song.album', 'Song.band'),
                 'order' => 'MAX(Song.created) DESC',
-                'limit' => 6
+                'limit' => 12,
             ));
         }
 
@@ -350,7 +350,7 @@ class SongsController extends AppController {
                 'fields' => array('Song.band', 'Song.album', 'cover'),
                 'group' => array('Song.album', 'Song.band'),
                 'order' => $sort,
-                'limit' => 36
+                'limit' => 36,
             )
         );
 

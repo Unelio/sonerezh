@@ -1,0 +1,174 @@
+/* ENSEMBLE (MOBILE + DESKTOP) */
+/* ========================================================================== */
+
+/* Page pour les recherches */
+.pagination {
+  margin-left: 10px;
+}
+.form-group div input[type="text"] {
+  margin-left: 10px;
+  width: calc(100% - 185px);
+}
+.form-group div button {
+  width: 150px;
+  margin-right: 10px;
+}
+.form-group div input,
+.form-group div button {
+  float: left;
+}
+
+/* Page des playlists */
+/* Temps de la piste dans la playlist et boutons */
+.playlists table .playtime-cell {
+  width: 75px;
+}
+.playlists table .playtime-cell .song-controls {
+  margin: 0;
+  padding: 0 2px;
+}
+
+/* DESKTOP */
+/* ========================================================================== */
+
+@media (min-width: 768px) {
+  /* Affichage des icones seulement dans le menu */
+  .navbar-right .mobile {
+    display: none;
+  }
+  
+  /* Page des playlists */
+  .playlists > .col-xs-3 {
+    width: 30%;
+  }
+  .playlists > .col-xs-9 {
+    width: 60%;
+  }
+}
+
+/* MOBILE */
+/* ========================================================================== */
+
+@media (max-width: 767px) {
+  /* Affichage du texte seulement dans le menu */
+  .navbar-right .desktop {
+    display: none;
+  }
+  
+  /* Supprime les flèches du hover et ajoute une coloration du background pour la class active */
+  .navbar-inverse .navbar-nav > .active > a::after {
+  	content: normal !important;
+  }
+  .navbar-inverse .navbar-nav > .active {
+    background-color: #337ab7;
+  }
+  
+  /* Barre du player */
+  .navbar-player .container,
+  .navbar-player .container > div,
+  ul.player-controls {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  ul.player-controls {
+    text-align: left;
+  }
+  .navbar-player .container > .col-xs-3:first-child > .player-margin li {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+  .navbar-player .container > .col-xs-3:first-child > .player-margin li:first-child {
+    padding-left: 5px !important;
+  }
+  .navbar-player > .container > .col-xs-3:last-child > .player-controls {
+    text-align: right;
+    padding-right: 12px !important;
+  }
+  
+  /* Page des préférences */
+  .settings {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .settings > .col-md-8 {
+    margin: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  /* Bitrate */
+  .settings .quality div:nth-child(2n) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* Boutons */
+  .settings > .col-md-8 > .col-xs-12 div:nth-child(2n),
+  .settings > .col-md-8 > .col-xs-12 div:nth-child(3n) {
+    margin-bottom: 5px;
+  }
+  
+  /* Page des playlists */
+  /* Liste des playlists */
+  .playlists > .col-xs-3 {
+    width: 100%;
+  }
+  /* Ensemble du contenu d'une playlist */
+  .playlists > .col-xs-9 {
+    width: calc(100% - 10px);
+    padding: 0 auto;
+  }
+  /* Titre de la playlist */
+  .playlists .playlist-row > .col-xs-10 {
+    width: 75%;
+  }
+  .playlists .playlist-row > .col-xs-2 {
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /* Sourlignage du titre */
+  .playlists .playlist-row > hr {
+    margin-left: 15px;
+  }
+  
+  /* Page des artistes */
+  /* Nom de l'artiste */
+  .artists > .band-name > .col-xs-10,
+  .search > .band-name > .col-xs-10 {
+    width: 70%;
+  }
+  .artists > .band-name > .col-xs-2,
+  .search > .band-name > .col-xs-2 {
+    width: 30%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /* Nom de l'album */
+  .artists > .band-name > .col-xs-12 > .album,
+  .search > .band-name > .col-xs-12 > .album {
+    padding-right: 0;
+  }
+  .artists > .band-name > .col-xs-12 > .album > .col-xs-10,
+  .search > .band-name > .col-xs-12 > .album > .col-xs-10 {
+    padding: 0;
+    width: 65%;
+  }
+  .artists > .band-name > .col-xs-12 > .album > .col-xs-10 > h4,
+  .search > .band-name > .col-xs-12 > .album > .col-xs-10 > h4 {
+    padding-left: 5px;
+  }
+  .artists > .band-name > .col-xs-12 > .album > .col-xs-2,
+  .search > .band-name > .col-xs-12 > .album > .col-xs-2 {
+    width: 35%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  /* Page des pistes */
+  /* Couper le nom des pistes */
+  td.truncated-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+  }
+}

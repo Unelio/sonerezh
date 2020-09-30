@@ -8,9 +8,9 @@ $this->end(); ?>
         <?php $i = 1; ?>
         <?php $hidden = ''; ?>
         <?php foreach ($latests as $album): ?>
-            <?php if ($i == 7) {
+            <?php if ($i == 4) {
                 $hidden = 'hidden-xs';
-            } elseif ($i >= 12) {
+            } elseif ($i >= 5) {
                     $hidden = 'hidden-sm hidden-xs';
             } ?>
             <div class="col-md-2 col-sm-3 col-xs-4 action-expend <?php echo $hidden; ?>" data-band="<?php echo h($album['Song']['band']); ?>" data-album="<?php echo h($album['Song']['album']); ?>" data-scroll-content="true">

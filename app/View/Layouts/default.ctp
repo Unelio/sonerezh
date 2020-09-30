@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?php echo $title_for_layout; ?>
+        Sonerezh - <?php echo $title_for_layout; ?>
     </title>
     <?php echo $this->Html->meta('icon'); ?>
-    <?php echo $this->Html->css(array('bootstrap.min', 'jquery.fs.selecter.min', 'pace', 'notify', 'slider', 'style')); ?>
+    <?php echo $this->Html->css(array('bootstrap.min', 'jquery.fs.selecter.min', 'pace', 'notify', 'slider', 'style', 'personnalisation')); ?>
     <?php
     echo $this->Html->script("lazyload.min");
     ?>
@@ -45,7 +45,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
-            <?php echo $this->Html->link("Sonerezh", array('controller' => 'songs', 'action' => 'index'), array('class' => 'navbar-brand')); ?>
+            <!-- TITLE -->
         </div>
         <div class="collapse navbar-collapse">
             <?php if (null !== AuthComponent::user('role') && AuthComponent::user('role') == 'admin') {
@@ -61,7 +61,7 @@
     <div class="container">
         <!-- Play/Pause buttons -->
         <div class="col-md-2 col-xs-3">
-            <ul class="player-controls">
+            <ul class="player-controls player-margin">
                 <li><span class="glyphicon glyphicon-backward" id="backward"></span></li>
                 <li class="play"><span class="glyphicon glyphicon-play" id="play"></span></li>
                 <li><span class="glyphicon glyphicon-forward" id="forward"></span></li>
@@ -89,8 +89,8 @@
             </ul>
         </div>
         <!-- Playlist management -->
-        <div class="col-md-2 col-xs-2">
-            <ul class="player-controls">
+        <div class="col-md-2 col-xs-3">
+            <ul class="player-controls player-margin">
                 <li><span class="glyphicon glyphicon-th-list" id="queue-button"></span></li>
                 <li><span class="glyphicon glyphicon-repeat" id="queue-repeat"></span></li>
                 <li><span class="glyphicon glyphicon-random" id="queue-shuffle"></span></li>

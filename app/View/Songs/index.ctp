@@ -1,5 +1,5 @@
 <?php if (!empty($songs)): ?>
-    <div class="col-lg-12" data-view="default">
+    <div class="col-lg-12 songs" data-view="default">
         <table class="table table-hover" data-scroll-container="true">
             <thead>
             <tr>

@@ -20,7 +20,6 @@
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th></th>
                     <th><?php echo __('Email / Login'); ?></th>
                     <th class="text-center"><?php echo __('Role'); ?></th>
                     <th class="text-center"><?php echo __('Management'); ?></th>
@@ -29,15 +28,6 @@
                 <tbody>
                 <?php foreach ($users as $user): ?>
                     <tr>
-                        <td style="width: 52px;" class="text-right">
-                            <?php 
-                            if (isset($user['User']['gravatar'])) {
-                                echo $this->Html->image($user['User']['gravatar'].'?s=32');
-                            } else {
-                                echo $this->Html->image($this->Image->resizedPath($user['User']['avatar'], 32, 32), array('width' => '32px', 'height' => '32px'));
-                            }
-                            ?>
-                        </td>
                         <td style="vertical-align: middle;"><?php echo $user['User']['email']; ?></td>
                         <?php if ($user['User']['role'] == 'admin') { ?>
                             <td class="text-center" style="vertical-align: middle;"><span class="label label-primary"><?php echo __('Administrator'); ?></span></td>
@@ -78,10 +68,7 @@
             </div>
             <div class="modal-body">
                 <?php
-                echo $this->Form->input('email', array(
-                    'placeholder' => __('Enter an email'),
-                    'after' => '<span class="help-block"><small>'.__('We also use email for avatar detection if no avatar is uploaded.').'</small></span>')
-                );
+                echo $this->Form->input('email', array('placeholder' => __('Enter an email')));
                 echo $this->Form->input('password', array('placeholder' => __('Choose a password')));
                 echo $this->Form->input('confirm_password', array('type' => 'password', 'placeholder' => __('Confirm password')));
                 echo $this->Form->input('role', array(

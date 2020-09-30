@@ -347,6 +347,10 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
+#: View/Elements/admin_navbar.ctp:14
+msgid "Import"
+msgstr ""
+
 #: View/Elements/admin_navbar.ctp:13
 #: View/Settings/index.ctp:119
 msgid "Database update"
@@ -771,6 +775,10 @@ msgstr ""
 
 #: View/Songs/import.ctp:142
 msgid "All the songs have already been imported"
+msgstr ""
+
+#: View/Songs/import.ctp:147
+msgid "Database is up to date!"
 msgstr ""
 
 #: View/Songs/import.ctp:97

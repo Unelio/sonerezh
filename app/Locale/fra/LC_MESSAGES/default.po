@@ -354,6 +354,10 @@ msgstr "Listes de lecture"
 msgid "Search"
 msgstr "Rechercher"
 
+#: View/Elements/admin_navbar.ctp:14
+msgid "Import"
+msgstr "Importer"
+
 #: View/Elements/admin_navbar.ctp:13 View/Settings/index.ctp:119
 msgid "Database update"
 msgstr "Mettre à jour la base"
@@ -805,6 +809,10 @@ msgstr ""
 msgid "All the songs have already been imported"
 msgstr "Toutes les pistes ont déjà été importées"
 
+#: View/Songs/import.ctp:147
+msgid "Database is up to date!"
+msgstr "La base de donnée est à jour !"
+
 #: View/Songs/import.ctp:97
 msgid "%s song detected "
 msgid_plural "%s songs detected "
@@ -857,7 +865,7 @@ msgstr "Confirmez votre mot de passe"
 
 #: View/Users/edit.ctp:34 View/Users/index.ctp:43;88
 msgid "Administrator"
-msgstr "Administrateur"
+msgstr "Admin"
 
 #: View/Users/edit.ctp:34 View/Users/index.ctp:45;88
 msgid "Listener"

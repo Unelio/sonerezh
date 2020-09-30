@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 	<?php echo $this->Form->create('User'); ?>
 		<fieldset>
-			<h2>Sonerezh - <?php echo __('Please Sign In'); ?></h2>
+			<h2><?php echo __('Please Sign In'); ?></h2>
 			<hr class="colorgraph"/>
             <?php echo $this->Form->input('email', array('placeholder' => __('Email Address'), 'required')); ?>
 			<?php echo $this->Form->input('password', array('placeholder' => __('Password'), 'required')); ?>
