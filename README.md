@@ -16,6 +16,7 @@ $HTTP["host"] =~ "sonerezh\.domaine\.extension$" {
                  "/search\?(.*)$" => "/index.php?$1",
                  "/album\?(.*)$" => "/index.php?$1",
                  "/albums\?(.*)$" => "/index.php?$1",
+                 "/playlists\?(.*)$" => "/index.php?$1",
                  "^/(.*)$" => "/index.php",
         )
 }
