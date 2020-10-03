@@ -50,8 +50,8 @@
 /* ========================================================================== */
 
 @media (max-width: 767px) {
-  /* Affichage du texte seulement dans le menu */
-  .navbar-right .desktop {
+  /* Affichage seulement sur la version desktop */
+  .desktop {
     display: none;
   }
   
