@@ -38,31 +38,34 @@
               <?php if (empty($playlists)): ?>
               <li class="list-group-item">&nbsp;</li>
               <?php endif; ?>
-              <?php foreach ($playlists as $id =>$p): ?>
-              <li class="list-group-item ">
-                  <small><i class="glyphicon glyphicon-list"></i></small>&nbsp;
-                  <?php echo $this->Html->link(
-                      $p,
-                      array('controller' => 'playlists', 'action' => 'index', $id)
-                  ); ?>
-                  <?php echo $this->Html->link(
-                      '<i class="glyphicon glyphicon-edit"></i>',
-                      '#',
-                      array(
-                          'class' => 'btn btn-xs btn-info btn-mgmt btn-playlist-edit',
-                          'data-toggle' => 'modal',
-                          'data-target' => '#edit-playlist-'.$id.'-modal',
-                          'title' => __('Rename'),
-                          'escape' => false
-                      )
-                  ); ?>
-                  <?php echo $this->Form->postLink(
-                      '<i class="glyphicon glyphicon-trash"></i>',
-                      array('controller' => 'playlists', 'action' => 'delete', $id),
-                      array('class' => 'btn btn-xs btn-danger btn-mgmt btn-playlist-delete', 'escape' => false),
-                      __('Are you sure ?')
-                  ); ?>
-              </li>
+              <?php
+                  $playlistsArrayObject = new ArrayObject($playlists);
+                  $playlistsArrayObject->asort();
+                  foreach ($playlistsArrayObject as $id => $p): ?>
+                    <li class="list-group-item ">
+                        <small><i class="glyphicon glyphicon-list"></i></small>&nbsp;
+                        <?php echo $this->Html->link(
+                            $p,
+                            array('controller' => 'playlists', 'action' => 'index', $id)
+                        ); ?>
+                        <?php echo $this->Html->link(
+                            '<i class="glyphicon glyphicon-edit"></i>',
+                            '#',
+                            array(
+                                'class' => 'btn btn-xs btn-info btn-mgmt btn-playlist-edit',
+                                'data-toggle' => 'modal',
+                                'data-target' => '#edit-playlist-'.$id.'-modal',
+                                'title' => __('Rename'),
+                                'escape' => false
+                            )
+                        ); ?>
+                        <?php echo $this->Form->postLink(
+                            '<i class="glyphicon glyphicon-trash"></i>',
+                            array('controller' => 'playlists', 'action' => 'delete', $id),
+                            array('class' => 'btn btn-xs btn-danger btn-mgmt btn-playlist-delete', 'escape' => false),
+                            __('Are you sure ?')
+                        ); ?>
+                    </li>
               <?php endforeach; ?>
           </ul>
       </div>
