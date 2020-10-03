@@ -3,7 +3,7 @@
         <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="action-play-next"><?php echo __('Play Next'); ?></a></li>
         <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="action-add-to-up-next"><?php echo __('Add to Up Next'); ?></a></li>
         <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="action-add-to" data-toggle="modal" data-type="song" data-target="#add-to" ><?php echo __('Add to...'); ?></a></li>
-        <li role="presentation">
+        <li role="presentation" class="desktop">
             <?php echo $this->Html->link(
                 __('Download'),
                 array('controller' => 'songs', 'action' => 'download', $song_id),
