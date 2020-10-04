@@ -28,6 +28,11 @@
   padding: 0 2px;
 }
 
+/* Page des albums */
+#album-expended .album > .col-xs-12 > h3 > span:last-child {
+  cursor: pointer;
+}
+
 /* DESKTOP */
 /* ========================================================================== */
 
@@ -83,6 +88,10 @@
   .navbar-player > .container > .col-xs-3:last-child > .player-controls {
     text-align: right;
     padding-right: 12px !important;
+  }
+  ul.player-controls li.active.single span::after {
+    text-align: center !important;
+    right: -4px;
   }
   
   /* Page des préférences */
@@ -170,5 +179,34 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 250px;
+  }
+  
+  /* Page des albums */
+  /* Visualisation d'un album dans la page albums */
+  #album-expended .album > .col-xs-12 > h3 > span:first-child {
+    display: block;
+    width: calc(100% - 105px);
+    float: left;
+  }
+  #album-expended .album > .col-xs-12 > h3 > small {
+    display: block;
+    width: 85px;
+    float: left;
+  }
+  #album-expended .album > .col-xs-12 > h3 > span:last-child {
+    display: block;
+    width: 20px;
+    float: right;
+    text-align: right;
+  }
+  #album-expended .album > .col-xs-12 > h3 > span:first-child,
+  #album-expended .album > .col-xs-12 > h3 > small,
+  #album-expended .album > .col-xs-12 > h3 > span:last-child {
+    min-height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+  #album-expended .album > .col-xs-12 > h4 {
+    clear: both;
   }
 }

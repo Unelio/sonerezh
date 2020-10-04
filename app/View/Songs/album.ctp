@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row album" style="margin-bottom: 20px;">
             <div class="col-xs-12">
-                <h3><?php echo h($album); ?>
+                <h3><span><?php echo h($album); ?></span>
                     <small>
                         <span class="glyphicon glyphicon-play song-controls action-play-album" title="<?php echo __('Play album'); ?>"></span>
                         <span class="glyphicon glyphicon-random song-controls action-shuffle-album" title="<?php echo __('Shuffle this album'); ?>"></span>
